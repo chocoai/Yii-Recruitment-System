@@ -1,0 +1,26 @@
+2017/08/03 10:00:47 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/base/CModule.php(394): CDbConnection->init()
+#3 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/auth/CDbAuthManager.php(589): CModule->getComponent('db')
+#4 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/auth/CDbAuthManager.php(59): CDbAuthManager->getDbConnection()
+#5 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/base/CModule.php(394): CDbAuthManager->init()
+#6 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/CWebApplication.php(185): CModule->getComponent('authManager')
+#7 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/auth/CWebUser.php(815): CWebApplication->getAuthManager()
+#8 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/web/protected/modules/rights/components/RWebUser.php(43): CWebUser->checkAccess('Index.*', Array, true)
+#9 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/web/protected/modules/rights/components/RightsFilter.php(43): RWebUser->checkAccess('Index.*')
+#10 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/filters/CFilter.php(38): RightsFilter->preFilter(Object(CFilterChain))
+#11 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/web/protected/modules/rights/components/RController.php(36): CFilter->filter(Object(CFilterChain))
+#12 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/filters/CInlineFilter.php(58): RController->filterRights(Object(CFilterChain))
+#13 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/CController.php(291): CFilterChain->run()
+#15 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/CWebApplication.php(282): CController->run('index')
+#17 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#18 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Applications/CT/apache/httpd/htdocs/github/Yii-Recruitment-System/web/index.php(18): CApplication->run()
+#20 {main}
+REQUEST_URI=/github/Yii-Recruitment-System/web/
+HTTP_REFERER=http://127.0.0.1/github/Yii-Recruitment-System/
+---

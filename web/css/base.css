@@ -1,0 +1,22 @@
+.igrid-view table.items th a.asc {
+    background: url("../images/up.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
+    padding-right: 10px;
+}
+
+.igrid-view table.items th a.desc {
+    background: url("../images/down.gif") no-repeat scroll right center rgba(0, 0, 0, 0);
+    padding-right: 10px;
+}
+
+.error input {
+    border: 1px solid red;
+}
+
+form .errorMessage {
+    color: red;
+    font-size: 0.9em;
+}
+
+.jumbotron{
+    background-color: transparent;
+}
